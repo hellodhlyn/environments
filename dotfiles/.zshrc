@@ -25,3 +25,11 @@ prompt adam1
 ### Plugins
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. $HOME/.asdf/asdf.sh
+. $HOME/.lyn/shinit.sh
+
+### Aliases
+alias ls='exa'
+alias cat='bat'
