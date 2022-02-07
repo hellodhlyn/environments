@@ -8,7 +8,7 @@ if ! command -v brew &> /dev/null; then
 fi
 
 brew update
-brew install antibody tmux exa bat
+brew install antibody direnv sops tmux exa bat
 
 for f in "$curr_path/apps/"*; do
     bash $f

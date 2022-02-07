@@ -27,6 +27,7 @@ source <(antibody init)
 antibody bundle < ~/.zsh_plugins
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(direnv hook zsh)"
 . $HOME/.asdf/asdf.sh
 . $HOME/.lyn/shinit.sh
 
