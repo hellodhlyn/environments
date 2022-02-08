@@ -10,3 +10,5 @@ fi
 cp $curr_path/dotfiles/.tmux.conf $HOME
 cp $curr_path/dotfiles/.zsh_plugins $HOME
 cp $curr_path/dotfiles/.zshrc $HOME
+cp $curr_path/dotfiles/.vimrc $HOME
+
