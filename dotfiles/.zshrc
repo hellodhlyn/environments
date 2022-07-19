@@ -1,7 +1,13 @@
+### oh-my-posh
+eval "$(oh-my-posh init zsh --config $HOME/.omp/themes/aliens.omp.json)"
+
+
 ### History stuffs
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt appendhistory
+setopt auto_cd
 
 
 ### Comp stuffs
@@ -21,16 +27,6 @@ bindkey  "^[[A"    up-line-or-search
 bindkey  "^[[B"    down-line-or-search
 
 
-### Prompt stuffs
-zstyle ':vcs_info:git:*' formats '%b'
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-
-PROMPT='%B${(%):-%~}%b %F{011}>%f '
-RPROMPT='%F{011}${vcs_info_msg_0_}%f'
-
-
 ### Plugins
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"
@@ -40,6 +36,7 @@ eval "$(direnv hook zsh)"
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins
 
+export GPG_TTY="$(tty)"
 
 ### Aliases
 alias ls='exa'
