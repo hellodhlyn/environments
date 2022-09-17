@@ -28,7 +28,9 @@ bindkey  "^[[B"    down-line-or-search
 
 
 ### Plugins
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 eval "$(direnv hook zsh)"
 . $HOME/.lyn/shinit.sh
 . $HOME/.asdf/asdf.sh
