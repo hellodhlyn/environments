@@ -1,4 +1,4 @@
 #/usr/env/bin bash
 
-alias ls="exa"
+alias ls="eza"
 alias cat="batcat"

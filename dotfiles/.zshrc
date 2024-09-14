@@ -41,5 +41,5 @@ antibody bundle < ~/.zsh_plugins
 export GPG_TTY="$(tty)"
 
 ### Aliases
-alias ls='exa'
+alias ls='eza'
 alias cat='bat'

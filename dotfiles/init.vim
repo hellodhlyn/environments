@@ -24,6 +24,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Developments
+Plug 'github/copilot.vim'
+
 " Rails supports
 Plug 'tpope/vim-rails'
 
