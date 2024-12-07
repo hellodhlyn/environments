@@ -1,3 +1,9 @@
+### brew
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+
 ### oh-my-posh
 eval "$(oh-my-posh init zsh --config $HOME/.omp/themes/aliens.omp.json)"
 
@@ -28,15 +34,12 @@ bindkey  "^[[B"    down-line-or-search
 
 
 ### Plugins
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
 eval "$(direnv hook zsh)"
 . $HOME/.lyn/shinit.sh
 . $HOME/.asdf/asdf.sh
 
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins
+. $HOME/.antidote/antidote.zsh
+antidote load $HOME/.zsh_plugins
 
 export GPG_TTY="$(tty)"
 
